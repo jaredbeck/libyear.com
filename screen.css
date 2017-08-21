@@ -2,6 +2,10 @@
 h1 { font-size: 64px }
 p, span, div, li { font-size: 20px }
 h1 { margin: 10px 0px; }
+code {
+  background-color: #eee;
+  font-family: courier, sans-serif;
+}
 #cartoon h2 { margin-bottom: 0; }
 .cartoon-panel {
   display: block;

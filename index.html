@@ -16,7 +16,9 @@
   <body>
     <h1>libyear</h1>
     <p>
-      A simple measure of <em>software dependency freshness</em>.
+      A <strong>simple</strong> measure of <em>software dependency
+      freshness</em>. It is a <strong>single number</strong> telling you how
+      up-to-date your dependencies are.
     </p>
     <div id="cartoon">
       <div class="cartoon-panel">
@@ -54,16 +56,55 @@
         your favorite - contributions welcome
       </li>
     </ul>
-    <h2>Details</h2>
+    <h2>Example 1</h2>
+    <p>
+      For example, a rails 5.0.0 dependency (released June 30, 2016) is roughly
+      <em>1 libyear</em> behind the 5.1.2 version (released June 26,
+      2017).
+    </p>
+    <h2>Simpler is Better</h2>
+    <p>
+      There are obviously more nuanced ways to calculate dependency freshness.
+      The advantage of this approach is its simplicity. You will be able to
+      explain this calculation to your colleagues in about 30s.
+    </p>
+    <h2>Example 2</h2>
     <p>
       If your system has two dependencies, the first <em>one</em> year old, the
       second <em>three</em>, then your system is <em>four</em> libyears
       out-of-date.
     </p>
+    <h2>A Healthy App</h2>
     <p>
-      There are obviously more nuanced ways to calculate dependency freshness.
-      The advantage of this approach is its simplicity. You will be able to
-      explain this calculation to your colleagues in about 30s.
+      At <a href="https://www.singlebrook.com">Singlebrook</a> we try to keep
+      our client’s apps below 10 libyears. We regularly rescue projects that are
+      over 100 libyears behind.
+    </p>
+    <h2>Other Measurements</h2>
+    <p>
+      <code>libyear-bundler</code> implements some of the other metrics
+      described by (Bouwers, Eekelen, Visser, 2015).
+    </p>
+    <p>
+      The <code>--versions</code> flag provides a metric for an installed
+      dependency’s freshness relative to the newest release’s major, minor, and
+      patch versions. Of course, this is most useful for dependencies that
+      follow a consistent versioning scheme such as semver.
+    </p>
+    <p>
+      The <code>--releases</code> flag provides a metric for the number of
+      releases between an installed version of dependency and the newest
+      released version of the dependency.
+    </p>
+    <p>
+      Each metric has it’s own advantages and disadvantages, and all quantify
+      the maintenance burden for an app. Taken together, they can help
+      prioritize maintenance for an inherited app, or help maintain a baseline
+      level of dependency freshness for an ongoing project.
+    </p>
+    <h2>Etymology</h2>
+    <p>
+      "lib" is short for "library", the most common form of dependency.
     </p>
     <h2>References</h2>
     <ul>
