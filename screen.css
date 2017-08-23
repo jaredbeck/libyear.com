@@ -7,13 +7,17 @@ code {
   font-family: courier, sans-serif;
 }
 #cartoon h2 { margin-bottom: 0; }
-.cartoon-panel {
-  display: block;
-}
 .cartoon-panel img {
   border: 5px solid black;
 }
-@media (min-width: 600px) {
+@media (max-device-width: 599px) {
+  .cartoon-panel {
+    display: block;
+  }
+
+  .cartoon-panel img { min-width: 100%; }
+}
+@media (min-device-width: 600px) {
   .cartoon-panel {
     display: inline-block;
   }
