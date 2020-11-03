@@ -14,131 +14,145 @@
     </script>
   </head>
   <body>
-    <h1>libyear</h1>
-    <p>
-      A <strong>simple</strong> measure of <em>software dependency
-      freshness</em>. It is a <strong>single number</strong> telling you how
-      up-to-date your dependencies are.
-    </p>
-    <div id="cartoon">
-      <div class="cartoon-panel">
-        <h2>Before</h2>
-        <img src="cartoon1.jpg" />
+    <div id="container">
+      <div class="row">
+        <div class="col">
+          <h1>libyear</h1>
+          <p>
+            A <strong>simple</strong> measure of <em>software dependency
+            freshness</em>. It is a <strong>single number</strong> telling you how
+            up-to-date your dependencies are.
+          </p>
+        </div>
       </div>
-      <div class="cartoon-panel">
-        <h2>After</h2>
-        <img src="cartoon2.jpg" />
+      <div class="row">
+        <div class="col col-6">
+          <h2>Example</h2>
+          <p>
+            Rails 5.0.0 (June 30, 2016) is roughly <em>1 libyear</em> behind
+            5.1.2 (June 26, 2017).
+          </p>
+          <h2>Simpler is Better</h2>
+          <p>
+            There are obviously more nuanced ways to calculate dependency
+            freshness. The advantage of this approach is its simplicity. You
+            will be able to explain this calculation to your colleagues in about
+            30s.
+          </p>
+        </div>
+        <div class="col col-6">
+          <h2>Download</h2>
+          <ul>
+            <li>
+              dotnet (NuGet) -
+              <a href="https://github.com/stevedesmond-ca/dotnet-libyear">
+                dotnet-libyear
+              </a>
+            </li>
+            <li>
+              js -
+              <a href="https://github.com/jdanil/libyear">libyear</a>
+            </li>
+            <li>
+              php (composer) -
+              <a href="https://github.com/stevedesmond-ca/php-libyear">
+                php-libyear
+              </a>
+            </li>
+            <li>
+              python (PyPI) -
+              <a href="https://github.com/nasirhjafri/libyear">
+                libyear
+              </a>
+            </li>
+            <li>
+              python -
+              <a href="https://github.com/sesh/piprot">
+                piprot
+              </a> (since 2013)
+            </li>
+            <li>
+              ruby (bundler) -
+              <a href="https://github.com/jaredbeck/libyear-bundler">
+                libyear-bundler
+              </a>
+            </li>
+            <li>
+              your favorite -
+              <a href="https://github.com/jaredbeck/libyear.com">
+                contributions welcome
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+      <div class="row my-3">
+        <div class="col">
+          <div id="cartoon">
+            <div class="cartoon-panel">
+              <h2>Before</h2>
+              <img src="cartoon1.jpg" />
+            </div>
+            <div class="cartoon-panel">
+              <h2>After</h2>
+              <img src="cartoon2.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-6">
+          <h2>Example 2</h2>
+          <p>
+            If your system has two dependencies, the first <em>one</em> year
+            old, the second <em>three</em>, then your system is <em>four</em>
+            libyears out-of-date.
+          </p>
+          <h2>A Healthy App</h2>
+          <p>
+            At <a href="https://www.singlebrook.com">Singlebrook</a> we try to keep
+            our client’s apps below 10 libyears. We regularly rescue projects that are
+            over 100 libyears behind.
+          </p>
+          <h2>Etymology</h2>
+          <p>
+            "lib" is short for "library", the most common form of dependency.
+          </p>
+        </div>
+        <div class="col col-6">
+          <h2>Other Measurements</h2>
+          <p>
+            <code>libyear-bundler</code> implements some of the other metrics
+            described by (Bouwers, Eekelen, Visser, 2015).
+          </p>
+          <p>
+            The <code>--versions</code> flag provides a metric for an installed
+            dependency’s freshness relative to the newest release’s major, minor, and
+            patch versions. Of course, this is most useful for dependencies that
+            follow a consistent versioning scheme such as semver.
+          </p>
+          <p>
+            The <code>--releases</code> flag provides a metric for the number of
+            releases between an installed version of dependency and the newest
+            released version of the dependency.
+          </p>
+          <p>
+            Each metric has it’s own advantages and disadvantages, and all quantify
+            the maintenance burden for an app. Taken together, they can help
+            prioritize maintenance for an inherited app, or help maintain a baseline
+            level of dependency freshness for an ongoing project.
+          </p>
+        </div>
+      </div>
+      <h2>References</h2>
+      <ul>
+        <li>
+          J. Cox, E. Bouwers, M. van Eekelen and J. Visser, Measuring Dependency
+          Freshness in Software Systems. In Proceedings of the 37th International
+          Conference on Software Engineering (ICSE 2015), May 2015
+          https://ericbouwers.github.io/papers/icse15.pdf
+        </li>
+      </ul>
     </div>
-    <h2>Download</h2>
-    <ul>
-      <li>
-        dotnet (NuGet) -
-        <a href="https://github.com/stevedesmond-ca/dotnet-libyear">
-          dotnet-libyear
-        </a>
-      </li>
-      <li>
-        js (npm) -
-        <a href="https://github.com/jaredbeck/libyear-npm">libyear-npm</a>
-      </li>
-      <li>
-        js (yarn) -
-        <a href="https://github.com/sbleon/libyear-yarn">libyear-yarn</a>
-      </li>
-      <li>
-        js (node) -
-        <a href="https://github.com/jdanil/libyear">libyear</a>
-      </li>
-      <li>
-        php (composer) -
-        <a href="https://github.com/stevedesmond-ca/php-libyear">
-          php-libyear
-        </a>
-      </li>
-      <li>
-        python (PyPI) -
-        <a href="https://github.com/nasirhjafri/libyear">
-          libyear
-        </a>
-      </li>
-      <li>
-        python -
-        <a href="https://github.com/sesh/piprot">
-          piprot
-        </a> (since 2013)
-      </li>
-      <li>
-        ruby (bundler) -
-        <a href="https://github.com/jaredbeck/libyear-bundler">
-          libyear-bundler
-        </a>
-      </li>
-      <li>
-        your favorite -
-        <a href="https://github.com/jaredbeck/libyear.com">
-          contributions welcome
-        </a>
-      </li>
-    </ul>
-    <h2>Example 1</h2>
-    <p>
-      For example, a rails 5.0.0 dependency (released June 30, 2016) is roughly
-      <em>1 libyear</em> behind the 5.1.2 version (released June 26,
-      2017).
-    </p>
-    <h2>Simpler is Better</h2>
-    <p>
-      There are obviously more nuanced ways to calculate dependency freshness.
-      The advantage of this approach is its simplicity. You will be able to
-      explain this calculation to your colleagues in about 30s.
-    </p>
-    <h2>Example 2</h2>
-    <p>
-      If your system has two dependencies, the first <em>one</em> year old, the
-      second <em>three</em>, then your system is <em>four</em> libyears
-      out-of-date.
-    </p>
-    <h2>A Healthy App</h2>
-    <p>
-      At <a href="https://www.singlebrook.com">Singlebrook</a> we try to keep
-      our client’s apps below 10 libyears. We regularly rescue projects that are
-      over 100 libyears behind.
-    </p>
-    <h2>Other Measurements</h2>
-    <p>
-      <code>libyear-bundler</code> implements some of the other metrics
-      described by (Bouwers, Eekelen, Visser, 2015).
-    </p>
-    <p>
-      The <code>--versions</code> flag provides a metric for an installed
-      dependency’s freshness relative to the newest release’s major, minor, and
-      patch versions. Of course, this is most useful for dependencies that
-      follow a consistent versioning scheme such as semver.
-    </p>
-    <p>
-      The <code>--releases</code> flag provides a metric for the number of
-      releases between an installed version of dependency and the newest
-      released version of the dependency.
-    </p>
-    <p>
-      Each metric has it’s own advantages and disadvantages, and all quantify
-      the maintenance burden for an app. Taken together, they can help
-      prioritize maintenance for an inherited app, or help maintain a baseline
-      level of dependency freshness for an ongoing project.
-    </p>
-    <h2>Etymology</h2>
-    <p>
-      "lib" is short for "library", the most common form of dependency.
-    </p>
-    <h2>References</h2>
-    <ul>
-      <li>
-        J. Cox, E. Bouwers, M. van Eekelen and J. Visser, Measuring Dependency
-        Freshness in Software Systems. In Proceedings of the 37th International
-        Conference on Software Engineering (ICSE 2015), May 2015
-        https://ericbouwers.github.io/papers/icse15.pdf
-      </li>
-    </ul>
   </body>
 </html>
