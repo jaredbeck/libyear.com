@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>libyear</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="screen.css" />
   </head>
   <body>
-    <div id="container">
+    <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col col-md-12">
           <h1>libyear</h1>
           <p>
             A <strong>simple</strong> measure of <em>software dependency
@@ -18,21 +21,19 @@
         </div>
       </div>
       <div class="row">
-        <div class="col col-6">
+        <div class="col col-md-6">
           <h2>Example</h2>
           <p>
-            Rails 5.0.0 (June 30, 2016) is roughly <em>1 libyear</em> behind
-            5.1.2 (June 26, 2017).
+            Rails 5.0.0 (June 2016) is <strong>1 libyear</strong> behind 5.1.2
+            (June 2017).
           </p>
           <h2>Simpler is Better</h2>
           <p>
-            There are obviously more nuanced ways to calculate dependency
-            freshness. The advantage of this approach is its simplicity. You
-            will be able to explain this calculation to your colleagues in about
-            30s.
+            There are more nuanced ways to calculate dependency freshness. This
+            approach is simple. You can explain this calculation in 30s.
           </p>
         </div>
-        <div class="col col-6">
+        <div class="col col-md-6">
           <h2>Download / Tools</h2>
           <ul>
             <li>
@@ -96,8 +97,8 @@
           </ul>
         </div>
       </div>
-      <div class="row my-3">
-        <div class="col">
+      <div class="row">
+        <div class="col col-md-12">
           <div id="cartoon">
             <div class="cartoon-panel">
               <h2>Before</h2>
@@ -111,25 +112,31 @@
         </div>
       </div>
       <div class="row">
-        <div class="col col-6">
+        <div class="col col-md-12">
+          <a href="https://github.com/jaredbeck/libyear.com">
+            Better cartoon welcome :)
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col-md-6">
           <h2>Example 2</h2>
           <p>
-            If your system has two dependencies, the first <em>one</em> year
-            old, the second <em>three</em>, then your system is <em>four</em>
-            libyears out-of-date.
+            If your system has a one year old dependency and a three year old
+            dependency, then your whole system is four libyears old.
           </p>
           <h2>A Healthy App</h2>
           <p>
-            At <a href="https://www.singlebrook.com">Singlebrook</a> we try to keep
-            our client’s apps below 10 libyears. We regularly rescue projects that are
-            over 100 libyears behind.
+            At <a href="https://www.singlebrook.com">Singlebrook</a> we try to
+            keep our client’s apps below 10 libyears. We regularly rescue
+            projects that are over 100 libyears behind.
           </p>
           <h2>Etymology</h2>
           <p>
             "lib" is short for "library", the most common form of dependency.
           </p>
         </div>
-        <div class="col col-6">
+        <div class="col col-md-6">
           <h2>Other Measurements</h2>
           <p>
             <code>libyear-bundler</code> implements some of the other metrics

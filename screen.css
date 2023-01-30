@@ -1,38 +1,8 @@
-/* Reset */
 *, ::after, ::before { box-sizing: border-box; }
 * { font-family: Helvetica, sans-serif; }
-body { padding: 15px; }
-h1 { font-size: 64px }
-p, span, div, li { font-size: 20px }
-h1 { margin: 10px 0px; }
 code {
   background-color: #eee;
   font-family: courier, sans-serif;
-}
-
-/* Grid */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.col {
-	position: relative;
-	width: 100%;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-@media (min-width: 600px) {
-  .col-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-}
-
-/* Utility */
-.my-3 {
-	margin-bottom: 1rem;
-	margin-top: 1rem;
 }
 
 /* Cartoon */
@@ -45,12 +15,25 @@ code {
 }
 .cartoon-panel img {
   border: 2px solid black;
+  width: 100%;
 }
 .cartoon-panel h2 {
-  margin: 0;
+  margin-top: 1em;
 }
 @media (min-width: 600px) {
   .cartoon-panel {
     max-width: 400px;
+  }
+  .cartoon-panel h2 {
+    margin: 0;
+  }
+}
+
+/* Color scheme */
+@media (prefers-color-scheme: dark) {
+  a { color: rgb(68, 187, 219); }
+  body { background-color: #252525; color: rgb(198, 201, 204); }
+  code {
+    background-color: #444;
   }
 }
